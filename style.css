@@ -1,0 +1,555 @@
+/********************************************/
+/* VARIABLES DECLARATION */
+/********************************************/
+:root {
+  /* COLORS */
+  --color-white: #ffffff;
+  --color-primary: #f44749;
+  --color-primary-light: #faa3a4;
+  --color-primary-dark: #7a2425;
+  --color-secondary: #f3af24;
+  --color-secondary-light: #f9d792;
+  --color-secondary-dark: #7a5812;
+  /* --color-accent: #9a03ff;
+  --color-accent-light: #b84fff;
+  --color-accent-dark: #6c02b3; */
+  --color-grey-0: #fefefe;
+  --color-grey-0-transparent: rgba(254, 254, 254, 0.9);
+  --color-grey-100: #cccccc;
+  --color-grey-300: #999999;
+  --color-grey-600: #666666;
+  --color-grey-900: #333333;
+  --color-footer-area: #2d2d2d;
+  --section-bg-color: #f9f9f9;
+
+  /* FONT SIZE SYSTEM (REM)*/
+  /* 10px = 1rem */
+  --font-size-normal: 1.8rem;
+  --font-size-h1: 7.6rem;
+  --font-size-h2: 5.6rem;
+  --font-size-h3: 4.2rem;
+  --font-size-h4: 2.8rem;
+  --font-size-h5: 2.6rem;
+  --font-size-h6: 2.2rem;
+  --font-size-16: 1.6rem;
+  --font-size-18: 1.8rem;
+  --font-size-24: 2.4rem;
+  --font-size-36: 3.6rem;
+  --font-size-52: 5.2rem;
+  --font-size-62: 6.2rem;
+
+  /* FONT WEIGHT (px)*/
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-strong: 900;
+
+  /* LETTER SPACING */
+  --letter-spacing-small: 0.5rem;
+  --letter-spacing-medium: 0.75rem;
+
+  /* LINE HEIGHTS */
+  --line-height-normal: 1;
+  --line-height-small: 1.05;
+  --line-height-medium: 1.2;
+  --line-height-paragraph: 1.6;
+  --line-height-large: 1.8;
+
+  /* OPACITY */
+  --bg-opacity: 1;
+  --bg-opacity-25: 0.25;
+  --bg-opacity-50: 0.5;
+  --bg-opacity-75: 0.75;
+  --bg-opacity-0: 0;
+  /*---------------------------------------
+  Default font family                
+-----------------------------------------*/
+  --body-font-family: "Montserrat", sans-serif;
+
+  /*---------------------------------------
+  BOX SHADOWS       
+-----------------------------------------*/
+  --box-shadow-normal: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  --box-shadow-small: 0 1.2rem 3.6rem rgba(0, 0, 0, 0.175) !important;
+  /*---------------------------------------
+  BORDER-RADIUS                
+-----------------------------------------*/
+  --border-radius-normal: 0.5rem;
+  --border-radius-medium: 0.9rem;
+  --border-radius-large: 1.1rem;
+
+  /*---------------------------------------
+  WHITESPACE - SPACING SYSTEM (REM)                
+-----------------------------------------*/
+  --margin-all-normal: 1.2rem;
+  --margin-all-small: 2.4rem;
+  --margin-all-medium: 3.6rem;
+  --margin-all-large: 4.8rem;
+  --margin-left-normal: 1.2rem;
+  --margin-left-small: 2.4rem;
+  --margin-left-medium: 3.6rem;
+  --margin-left-large: 4.8rem;
+  --margin-right-normal: 1.2rem;
+  --margin-right-small: 2.4rem;
+  --margin-right-medium: 3.6rem;
+  --margin-right-large: 4.8rem;
+  --margin-top-normal: 1.2rem;
+  --margin-top-small: 2.4rem;
+  --margin-top-medium: 3.6rem;
+  --margin-top-large: 4.8rem;
+  --margin-bottom-normal: 1.2rem;
+  --margin-bottom-small: 2.4rem;
+  --margin-bottop-medium: 3.6rem;
+  --margin-bottom-large: 4.8rem;
+  --padding-all-normal: 1.2rem;
+  --padding-all-small: 2.4rem;
+  --padding-all-medium: 3.6rem;
+  --padding-all-large: 4.8rem;
+  --padding-all-xlarge: 7.2rem;
+  --padding-all-xxlarge: 9.6rem;
+  --padding-left-normal: 1.2rem;
+  --padding-left-small: 2.4rem;
+  --padding-left-medium: 3.6rem;
+  --padding-left-large: 4.8rem;
+  --padding-right-normal: 1.2rem;
+  --padding-right-small: 2.4rem;
+  --padding-right-medium: 3.6rem;
+  --padding-right-large: 4.8rem;
+  --padding-top-normal: 1.2rem;
+  --padding-top-small: 2.4rem;
+  --padding-top-medium: 3.6rem;
+  --padding-top-large: 4.8rem;
+  --padding-bottom-normal: 1.2rem;
+  --padding-bottom-small: 2.4rem;
+  --padding-bottom-medium: 3.6rem;
+  --padding-bottom-large: 4.8rem;
+
+  /*---------------------------------------
+  MARGIN/ PADDING: LEFT AND RIGHT ONLY              
+-----------------------------------------*/
+
+  --margin-center-align: 0 auto;
+  --margin-lr-normal: 0 1.2rem;
+  --margin-lr-small: 0 2.4rem;
+  --margin-lr-medium: 0 3.6rem;
+  --margin-lr-large: 0 4.8rem;
+  --margin-lr-xlarge: 0 9.6rem;
+  --margin-tb-normal: 1.2rem 0;
+  --margin-tb-small: 2.4rem 0;
+  --margin-tb-medium: 3.6rem 0;
+  --margin-tb-large: 4.8rem 0;
+  --padding-lr-normal: 0 1.2rem;
+  --padding-lr-small: 0 2.4rem;
+  --padding-lr-medium: 0 3.6rem;
+  --padding-lr-large: 0 4.8rem;
+  --padding-tb-normal: 1.2rem 0;
+  --padding-tb-small: 2.4rem 0;
+  --padding-tb-medium: 3.6rem 0;
+  --padding-tb-large: 4.8rem 0;
+  --padding-tblr-normal: 1.2rem 1.2rem;
+  --padding-tblr-small: 1.2rem 2.4rem;
+  --padding-tblr-medium: 1.2rem 3.6rem;
+  --padding-tblr-large: 1.2rem 4.8rem;
+  /* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+  /* FLEX GAP  */
+  --flex-gap-default: 1.2rem;
+  --flex-gap-small: 2.4rem;
+  --flex-gap-medium: 3.6rem;
+  --flex-gap-large: 4.8rem;
+}
+/* GLOBAL M/P/B RESET */
+/* Remove default margins */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root default */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* DEFAULT FONT CONVERSION SIZE */
+html {
+  /*  Default font-size = 16px 
+      10px / 16px = 0.625 = 62.5% 
+      10px = 1rem
+      This is a percentage of users' browser
+      font-size setting */
+  font-size: 62.5%;
+  /* overflow-x: hidden; */
+}
+
+/*---------------------------------------
+ GENERAL FONT SETTING                
+-----------------------------------------*/
+body {
+  font-family: var(--body-font-family);
+  color: var(--color-grey-900);
+  line-height: var(--line-height-small);
+  font-weight: var(--font-weight-normal);
+
+  font-size: var(--font-size-normal);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/*---------------------------------------
+  TYPOGRAPHY               
+-----------------------------------------*/
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-grey-900);
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+h1,
+h2 {
+  font-weight: var(--font-weight-bold);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: normal;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+a,
+button {
+  transition: all 0.3s;
+  text-decoration: none;
+  touch-action: manipulation;
+  color: var(--color-grey-900);
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+/*---------------------------------------
+  NAVIGATION              
+-----------------------------------------*/
+.navbar {
+  background: var(--white-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar-brand {
+  color: var(--dark-color);
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-weight-bold);
+  margin-right: 0;
+}
+
+/*---------------------------------------
+  MARGIN AND PADDING SETTINGS              
+-----------------------------------------*/
+.mt-0 {
+  margin-top: 0;
+}
+/* margin top default 1rem */
+.mt-df {
+  margin-top: var(--margin-top-default);
+}
+/* margin top small */
+.mt-sm {
+  margin-top: 5px;
+  /* margin-top: var(--margin-top-small); */
+}
+/* margin top medium */
+.mt-md {
+  margin-top: var(--margin-top-medium);
+}
+/* margin top large */
+.mt-lg {
+  margin-top: var(--margin-top-large);
+}
+.mb-df {
+  margin-bottom: var(--margin-bottom-default);
+}
+/* margin bottom small */
+.mb-sm {
+  margin-bottom: var(--margin-bottom-small);
+}
+/* margin bottom medium */
+.mb-md {
+  margin-bottom: var(--margin-bottom-medium);
+}
+/* margin bottom large */
+.mb-lg {
+  margin-bottom: var(--margin-bottom-large);
+}
+/* margin left default */
+.ml-df {
+  margin-left: var(--margin-left-default);
+}
+/* margin left small */
+.ml-sm {
+  margin-left: var(--margin-left-small);
+}
+/* margin left medium */
+.ml-md {
+  margin-left: var(--margin-left-medium);
+}
+/* margin left large */
+.ml-lg {
+  margin-left: var(--margin-left-large);
+}
+/* margin right default */
+.mr-df {
+  margin-right: var(--margin-right-default);
+}
+/* margin right small */
+.mr-sm {
+  margin-right: var(--margin-right-small);
+}
+/* margin right medium */
+.mr-md {
+  margin-right: var(--margin-right-medium);
+}
+/* margin right large */
+.mr-lg {
+  margin-right: var(--margin-right-large);
+}
+
+/*---------------------------------------
+  CUSTOM BUTTON              
+-----------------------------------------*/
+.btn {
+  width: auto;
+  height: auto;
+}
+.btn-danger {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.custom-btn {
+  border: 0;
+  color: var(--color-white);
+  font-size: var(--font-size-18);
+  padding: 1rem 3.5rem;
+}
+
+.bg-white {
+  opacity: var(--bg-opacity);
+  background-color: rgba(var(--color-white), var(--bg-opacity)) !important;
+}
+
+.shadow-sm {
+  box-shadow: var(--box-shadow-small);
+}
+
+.container {
+  max-width: 100vw;
+}
+
+.c-flex {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 7.5rem;
+}
+
+.navbar-nav .nav-link.active {
+  /* color: white; */
+  color: var(--color-primary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  /* font-weight: var(--font-weight-semi-bold); */
+  /* background-color: var(--color-primary); */
+}
+.nav-link:hover {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.mx-auto {
+  margin: var(--margin-center-align);
+}
+
+/* SLIDER */
+.slider {
+  max-width: 100vw;
+  height: calc(100vh - 5.89rem);
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: all 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 1s;
+}
+
+.slider__btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.slider__btn--left,
+.slider__btn--right {
+  color: white;
+}
+.slider__btn--left:hover,
+.slider__btn--right:hover {
+  color: rgba(0, 0, 0);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #fff;
+  /* background-color: #888; */
+  opacity: 1;
+}
