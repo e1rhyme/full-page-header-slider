@@ -1,1 +1,1 @@
-# full-page-header-slider
+# full-page-slider
