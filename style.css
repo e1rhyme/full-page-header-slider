@@ -437,9 +437,9 @@ li {
 .navbar-nav .nav-link.active {
   /* color: white; */
   color: var(--color-primary);
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 0.5rem;
-  /* font-weight: var(--font-weight-semi-bold); */
+  font-weight: var(--font-weight-semi-bold);
   /* background-color: var(--color-primary); */
 }
 .nav-link:hover {
