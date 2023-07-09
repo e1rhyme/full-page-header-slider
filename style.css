@@ -3,6 +3,7 @@
 /********************************************/
 :root {
   /* COLORS */
+  --no-bg: transparent;
   --color-white: #ffffff;
   --color-primary: #f44749;
   --color-primary-light: #faa3a4;
@@ -202,6 +203,7 @@ body {
   font-size: var(--font-size-normal);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  position: relative;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -307,16 +309,47 @@ li {
   NAVIGATION              
 -----------------------------------------*/
 .navbar {
-  background: var(--white-color);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: var(--no-bg);
+  padding: 3rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 136.6rem;
+  z-index: 99;
+}
+
+.navbar a {
+  padding: 1.2rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 2.5rem;
+  text-decoration: none;
+  color: var(--color-white);
 }
 
 .navbar-brand {
   color: var(--dark-color);
-  font-size: var(--h5-font-size);
+  font-size: var(--font-size-h4);
+  text-transform: uppercase;
   font-weight: var(--font-weight-bold);
   margin-right: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar .red {
+  color: var(--color-primary);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color-primary);
+}
+.nav-link:hover {
+  color: var(--color-grey-900);
 }
 
 /*---------------------------------------
@@ -428,21 +461,6 @@ li {
   justify-content: space-between;
 }
 
-.navbar-nav {
-  display: flex;
-  flex-direction: row;
-  gap: 7.5rem;
-}
-
-.navbar-nav .nav-link.active {
-  color: var(--color-primary);
-  font-weight: var(--font-weight-semi-bold);
-}
-.nav-link:hover {
-  color: var(--color-primary);
-  font-weight: var(--font-weight-medium);
-}
-
 .mx-auto {
   margin: var(--margin-center-align);
 }
@@ -450,7 +468,8 @@ li {
 /* SLIDER */
 .slider {
   max-width: 100vw;
-  height: calc(100vh - 5.89rem);
+  height: 100vh;
+  /* height: calc(100vh - 5.89rem); */
   margin: 0 auto;
   position: relative;
 
